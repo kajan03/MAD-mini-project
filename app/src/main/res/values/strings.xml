@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="textView2">My items</string>
+    <string name="textView3">My Bag</string>
+    <string name="textView4">Your bag is empty!</string>
+    <string name="textView5">BOYS GREY PRINTED COTTON ZIP-THROUGH HOODIE</string>
+    <string name="textView6">Rs 999.00</string>
+    <string name="textView9">WOMEN DRESS POLKA DOT GREY</string>
+    <string name="textView10">Rs 2999.00</string>
+    <string name="textView11">Product(s) Total:</string>
+    <string name="textView12">Discount:</string>
+    <string name="textView13">Estimated Total:</string>
+    <string name="textView14">Rs 300.00:</string>
+    <string name="textView15">Rs 3998.00</string>
+    <string name="textView16">Rs 3698.00</string>
+    <string name="button2">CONTINUE SHOPPING</string>
+    <string name="button3">Product Size: L</string>
+    <string name="button4">Quantity: 1</string>
+    <string name="button7">Quantity: 1</string>
+    <string name="button8">Product Size: m</string>
+    <string name="button9">PROCEED TO CHECKOUT</string>
+    <string name="country_prompt">kj</string>
+ </resources>
