@@ -21,12 +21,12 @@ public class PurchaseConfirmation extends AppCompatActivity {
             bt1 = findViewById(R.id.cpayment);
             bt2 = findViewById(R.id.cancel4);
 
-            bt1.setOnClickListener(new View.OnClickListener() {
+        /*  bt1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Context context = getApplicationContext(); //The context to use. Usually your Application or Activity object
-                    CharSequence message = "Paid Successfully";//Display string
-                    int duration = Toast.LENGTH_SHORT; //How long the toast message will lasts
+                    Context context = getApplicationContext();
+                    CharSequence message = "Paid Successfully";
+                    int duration = Toast.LENGTH_SHORT;
                     Toast toast = Toast.makeText(context, message, duration);
                     toast.show();
 
@@ -34,6 +34,7 @@ public class PurchaseConfirmation extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
+
 
             bt2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -49,6 +50,6 @@ public class PurchaseConfirmation extends AppCompatActivity {
                 }
             });
 
-
+        */
         }
     }

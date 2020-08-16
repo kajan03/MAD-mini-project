@@ -9,8 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewPaymentShipping"></activity>
-        <activity android:name=".ShippingDetails" />
+        <activity android:name=".ViewPaymentShipping"/>
+        <activity android:name=".ShippingDetails" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".PurchaseConfirmation" />
         <activity android:name=".Payment" />
         <activity android:name=".EditCode" />
@@ -18,18 +24,6 @@
         <activity android:name=".DeletePayment" />
         <activity android:name=".CustomerEditShiping" />
         <activity android:name=".AddCode" />
-        <activity android:name=".home" />
-        <activity android:name=".ProductList" />
-        <activity android:name=".Crud" />
-        <activity android:name=".AddProduct" />
-        <activity android:name=".MainActivity2" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
