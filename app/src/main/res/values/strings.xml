@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="M1">Log in to your Account</string>
+    <string name="M2">Sign Up</string>
+    <string name="M3">LOG IN</string>
+    <string name="M4">Login</string>
+    <string name="M5">Password</string>
+    <string name="M6">Username</string>
+    <string name="M7">Rate Us...</string>
+    <string name="M8">Enter your feedback</string>
+    <string name="M9">My Profile</string>
+    <string name="M10">Username</string>
+    <string name="M11">Password</string>
+    <string name="M12">Email</string>
+    <string name="M13">Address</string>
+    <string name="M14">Contact No</string>
+    <string name="M15">Update</string>
+    <string name="M17">Already have an account?</string>
+    <string name="M18">Button</string>
+    <string name="M19">FEEDBACK</string>
+    <string name="M20">After using Albito for a bit now, how would you rate your experience?</string>
+    <string name="M21">Leave your comment here</string>
+    <string name="M22">User Details</string>
+    <string name="M23">Shalini</string>
+    <string name="M24">shali23@gmail.com</string>
+    <string name="M25">Create your Account</string>
+    <string name="M26">Edit</string>
+    <string name="M27">Del</string>
+    <string name="M28">Malan</string>
+    <string name="M29">Mal@gmail.com</string>
+    <string name="M30">Kevin</string>
+    <string name="M31">kevin@gmail.com</string>
+    <string name="M32">Feedback List</string>
+    <string name="M33">Nice!!</string>
+    <string name="M34">Good job!!</string>
+    <string name="M35">Perfect materials</string>
+    <string name="M36">SUBMIT</string>
+    <string name="M37">Sign in</string>
+
+</resources>
