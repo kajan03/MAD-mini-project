@@ -27,6 +27,7 @@ public class ShippingDetails extends AppCompatActivity {
     DetailsOfShipping DShip;
     DatabaseReference dbref;
     int searchID;
+    long maxid = 0;
 
 
     private void clearControls(){
@@ -63,6 +64,20 @@ public class ShippingDetails extends AppCompatActivity {
 
         DShip = new DetailsOfShipping();
 
+        //auto increment id session
+        dbref = FirebaseDatabase.getInstance().getReference().child("DetailsOfShipping");
+        dbref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists())
+                    maxid=(dataSnapshot.getChildrenCount());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     protected void onResume(){
@@ -70,8 +85,7 @@ public class ShippingDetails extends AppCompatActivity {
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                dbref = FirebaseDatabase.getInstance().getReference().child("DetailsOfShipping");
+            public void onClick(View view) { //add data to database and validation
                 try{
                     if(TextUtils.isEmpty(txtfName.getText().toString()))
                         Toast.makeText(getApplicationContext(),"Please enter your First Name",Toast.LENGTH_SHORT).show();
@@ -97,7 +111,8 @@ public class ShippingDetails extends AppCompatActivity {
                         DShip.setPhoneNo(Integer.parseInt(txtpno.getText().toString().trim()));
                         DShip.setEmail(txtemail.getText().toString().trim());
 
-                        dbref.push().setValue(DShip);
+                        dbref.child(String.valueOf(maxid+1)).setValue(DShip); // add to database with auto increment id
+
 
                         Toast.makeText(getApplicationContext(),"Data Saved Successfully, Proseeding to Payment",Toast.LENGTH_SHORT).show();
                         clearControls();
@@ -125,6 +140,7 @@ public class ShippingDetails extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(dataSnapshot.exists()){
+
                             for(DataSnapshot ds : dataSnapshot.getChildren()){
                                 txtfName.setText((ds.child("firstName").getValue().toString()));
                                 txtlName.setText((ds.child("lastName").getValue().toString()));

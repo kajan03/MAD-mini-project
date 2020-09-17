@@ -1,5 +1,6 @@
 package com.example.myapplication1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -15,8 +16,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Payment extends AppCompatActivity {
 
@@ -25,6 +29,7 @@ public class Payment extends AppCompatActivity {
     TextView t1,t2,t3,t4,t5;
     DatabaseReference dbref;
     DetailsOfPayment DPay;
+    long maxid = 0;
 
     private void clearControls() {
         e1.setText("");
@@ -93,6 +98,21 @@ public class Payment extends AppCompatActivity {
         b2 = findViewById(R.id.cancel1);
         b3 = findViewById(R.id.edit);
 
+        dbref = FirebaseDatabase.getInstance().getReference().child("DetailsOfPayment");
+        dbref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists())
+                    maxid=(dataSnapshot.getChildrenCount());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
 
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,7 +151,6 @@ public class Payment extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dbref = FirebaseDatabase.getInstance().getReference().child("DetailsOfPayment");
                 try{
                     if(TextUtils.isEmpty(e1.getText().toString()))
                         Toast.makeText(getApplicationContext(),"Please enter your Card Number",Toast.LENGTH_SHORT).show();
@@ -159,7 +178,7 @@ public class Payment extends AppCompatActivity {
                         DPay.setYear(Integer.parseInt(e7.getText().toString().trim()));
                         DPay.setCvv(Integer.parseInt(e8.getText().toString().trim()));
 
-                        dbref.push().setValue(DPay);
+                        dbref.child(String.valueOf(maxid+1)).setValue(DPay); // add to database with auto increment id
 
                         Toast.makeText(getApplicationContext(),"Data Saved Successfully, Proseeding to Checkout",Toast.LENGTH_SHORT).show();
                         clearControls();
