@@ -137,7 +137,7 @@ public class Payment extends AppCompatActivity {
                 Toast toast = Toast.makeText(context, message, duration);
                 toast.show();
 
-                Intent intent = new Intent(Payment.this,CustomerEditShiping.class);
+                Intent intent = new Intent(Payment.this,ShippingDetails.class);
                 startActivity(intent);
 
             }
