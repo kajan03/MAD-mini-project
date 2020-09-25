@@ -32,9 +32,24 @@ public class codelist extends ArrayAdapter<DetailsOfCode> {
         View listViewItem = inflater.inflate(R.layout.listcode,null,true);
         TextView textView1 = (TextView) listViewItem.findViewById(R.id.textView1);
         TextView textView2 = (TextView) listViewItem.findViewById(R.id.textView2);
+        TextView textView = (TextView)listViewItem.findViewById(R.id.textView);
+        TextView textView8 = (TextView)listViewItem.findViewById(R.id.textView8);
+
+
+
 
         textView1.setTextColor(Color.BLACK);
         textView2.setTextColor(Color.BLACK);
+        textView.setTextColor(Color.BLACK);
+        textView8.setTextColor(Color.BLACK);
+
+
+
+        textView1.setTextSize(20);
+        textView2.setTextSize(20);
+        textView.setTextSize(20);
+        textView8.setTextSize(20);
+
 
         DetailsOfCode codedetail = codeList.get(position);
 

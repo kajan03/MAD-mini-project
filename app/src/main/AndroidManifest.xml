@@ -9,26 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".viewshippingdetails"></activity>
+        <activity android:name=".DeleteShipping"></activity>
+        <activity android:name=".DeletePayment" />
+        <activity android:name=".viewshippingdetails" />
         <activity android:name=".viewpaymentdetails" />
         <activity android:name=".viewcodedetails" />
-        <activity android:name=".ViewPaymentShipping" >
-
-        </activity>
-        <activity android:name=".ShippingDetails">
+        <activity android:name=".ViewPaymentShipping">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ShippingDetails" />
         <activity android:name=".PurchaseConfirmation" />
         <activity android:name=".Payment" />
-        <activity android:name=".DeleteShipping" />
-        <activity android:name=".DeletePayment" />
-        <activity android:name=".AddCode">
-
-        </activity>
+        <activity android:name=".AddCode" />
 
         <meta-data
             android:name="preloaded_fonts"

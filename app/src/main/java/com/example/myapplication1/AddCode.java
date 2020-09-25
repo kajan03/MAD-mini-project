@@ -9,8 +9,10 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -20,6 +22,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 public class AddCode extends AppCompatActivity {
 
     Button btn5, btn6, btn7, btn8,btn9,btn10;
@@ -27,6 +31,7 @@ public class AddCode extends AppCompatActivity {
     DetailsOfCode DCode;
     DatabaseReference dbref;
     String searchID,idToBeRemoved;
+    long maxid = 0;
 
     private void clearControls() {
         description.setText("");
@@ -41,6 +46,7 @@ public class AddCode extends AppCompatActivity {
         description = findViewById(R.id.descriptiontext);
         code = findViewById(R.id.discodetext);
         search = findViewById(R.id.searchid);
+
 
         btn5 = findViewById(R.id.button_edit);
         btn6 = findViewById(R.id.add);
@@ -69,7 +75,7 @@ public class AddCode extends AppCompatActivity {
                         DCode.setDescription(description.getText().toString().trim());
                         DCode.setCode(code.getText().toString().trim());
 
-                        dbref.push().setValue(DCode); // add to database with auto increment id
+                        dbref.child(String.valueOf(maxid+1)).setValue(DCode);
 
                         Toast.makeText(getApplicationContext(), "Data Saved Successfully", Toast.LENGTH_SHORT).show();
                         clearControls();
@@ -126,7 +132,7 @@ public class AddCode extends AppCompatActivity {
                         DCode.setDescription(description.getText().toString().trim());
                         DCode.setCode(code.getText().toString().trim());
                         dbref = FirebaseDatabase.getInstance().getReference().child("DetailsOfCode");
-                        dbref.push().setValue(DCode);
+                        dbref.child(String.valueOf(maxid+1)).setValue(DCode);
 
                         Toast.makeText(getApplicationContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();
                         clearControls();
