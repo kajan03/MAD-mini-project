@@ -15,13 +15,15 @@
         <activity android:name=".viewpaymentdetails" />
         <activity android:name=".viewcodedetails" />
         <activity android:name=".ViewPaymentShipping">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".ShippingDetails" />
+        <activity android:name=".ShippingDetails" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".PurchaseConfirmation" />
         <activity android:name=".Payment" />
         <activity android:name=".AddCode" />
