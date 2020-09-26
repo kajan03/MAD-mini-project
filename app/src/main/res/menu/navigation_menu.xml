@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menuProfile"
+        android:title="@string/Profile"
+        android:icon="@drawable/profile"
+        />
+
+
+
+    <item android:id="@+id/menuCategory"
+        android:title="@string/Categories"
+        android:icon="@drawable/catogoryicon">
+
+        <menu>
+            <item android:id="@+id/menuTshirt"
+                android:title="@string/Tshirts"
+                android:icon="@drawable/tshirticon"
+                />
+
+        </menu>
+    </item>
+
+
+
+    <item android:id="@+id/menuCart"
+        android:title="@string/Orders"
+        android:icon="@drawable/carticon"
+        />
+
+    <item android:id="@+id/menuSettings"
+        android:title="@string/Settings"
+        android:icon="@drawable/settings"
+        />
+
+    <item android:id="@+id/menuLogout"
+        android:title="@string/logout"
+        android:icon="@drawable/logouticon"
+        />
+
+</menu>
