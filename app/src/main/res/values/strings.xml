@@ -1,5 +1,71 @@
 <resources>
 
+    <string name="app_name">Men</string>
+    <string name="Category1">Men</string>
+    <string name="Shirt1">Hollister</string>
+    <string name="Description1">Full Sleeved Tshirt</string>
+    <string name="Jeans1">DNMX</string>
+    <string name="Description2">Torned slim fit Jeans</string>
+    <string name="Trouser1">Splash</string>
+    <string name="Description3">Brown Trouser</string>
+    <string name="DenShirt1">DNMX</string>
+    <string name="Description">Denim Shirt</string>
+    <string name="Tshirt2">Ausk</string>
+    <string name="Description5">Cotton crew Tshirt</string>
+    <string name="Shirt2">Strop</string>
+    <string name="Description6">Long sleeved formal</string>
+    <string name="price1">Rs.1500</string>
+    <string name="Price2">Rs.2500</string>
+    <string name="Price3">Rs.3000</string>
+    <string name="Price4">Rs.2999</string>
+    <string name="Price5">Rs.3999</string>
+    <string name="All" translatable="false">All</string>
+    <string name="Tshirts">Tshirts</string>
+    <string name="Shirts">Shirts</string>
+    <string name="Jeans">Jeans</string>
+    <string name="Trouser">Trouser</string>
+    <string name="Cart">Add to Cart</string>
+    <string name="Quantity">Qty</string>
+    <string name="AddProduct">Add Product</string>
+    <string name="AddImage">Add Product Image Here</string>
+    <string name="Grey">Grey,Blue,Red</string>
+    <string name="Delete">Delete</string>
+    <string name="Update">Update</string>
+    <string name="ProductList">Products List</string>
+    <string name="Appname">Albito</string>
+    <string name="NewArrive">New Arrivals</string>
+    <string name="Popular">Most Popular Products</string>
+    <string name="Xl">XL</string>
+    <string name="L">L</string>
+    <string name="M">M</string>
+    <string name="S">S</string>
+    <string name="logout">Logout</string>
+    <string name="Orders">Orders</string>
+    <string name="Categories">Categories</string>
+    <string name="Settings">Settings</string>
+
+
+    <string name="Profile">Profile</string>
+    <string name="title_activity_nav_home">NavHomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="Welcome">Welcome to Albito!!!</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Men">Men</string>
+    <string name="Women">Women</string>
+    <string name="Kids">Kids</string>
+    <string name="Edit">Edit</string>
+    <string name="Del">Delete</string>
+
     //Strings of DEEPIKA
     //Strings of Shipping Details
     <string name="shipping">SHIPPING DETAILS</string>
