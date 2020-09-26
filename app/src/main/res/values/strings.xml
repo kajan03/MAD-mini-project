@@ -38,4 +38,30 @@
     <string name="L">L</string>
     <string name="M">M</string>
     <string name="S">S</string>
+    <string name="logout">Logout</string>
+    <string name="Orders">Orders</string>
+    <string name="Categories">Categories</string>
+    <string name="Settings">Settings</string>
+
+
+    <string name="Profile">Profile</string>
+    <string name="title_activity_nav_home">NavHomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="Welcome">Welcome to Albito!!!</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Men">Men</string>
+    <string name="Women">Women</string>
+    <string name="Kids">Kids</string>
+    <string name="Edit">Edit</string>
+    <string name="Del">Delete</string>
 </resources>
