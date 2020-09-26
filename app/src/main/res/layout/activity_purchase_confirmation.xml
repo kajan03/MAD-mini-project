@@ -40,7 +40,7 @@
     </LinearLayout>
     <androidx.cardview.widget.CardView
         android:layout_width="380dp"
-        android:layout_height="400dp"
+        android:layout_height="450dp"
         android:layout_marginLeft="15dp"
         app:cardBackgroundColor="#FCEBEB"
         app:cardCornerRadius="30dp">
@@ -227,44 +227,45 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="100dp"
                     android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/cpayment"
                         android:layout_width="150dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:layout_marginStart="30dp"
                         android:layout_marginLeft="150dp"
                         android:layout_marginTop="20dp"
-                        android:layout_marginEnd="10dp"
+                        android:layout_marginEnd="15dp"
                         android:layout_marginRight="150dp"
+                        android:background="@drawable/buttonround"
                         android:backgroundTint="#AAF8AD"
                         android:fontFamily="monospace"
                         android:text="@string/cpayment"
                         android:textColor="#000000"
                         android:visibility="visible"
-                        android:background="@drawable/buttonround"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/number02">
 
                     </Button>
+
                     <Button
                         android:id="@+id/cancel4"
                         android:layout_width="150dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:layout_marginStart="2dp"
                         android:layout_marginLeft="150dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="28dp"
                         android:layout_marginEnd="150dp"
                         android:layout_marginRight="150dp"
+                        android:background="@drawable/buttonround"
                         android:backgroundTint="#F97C67"
                         android:fontFamily="monospace"
                         android:text="@string/cancel4"
                         android:textColor="#000000"
                         android:visibility="visible"
-                        android:background="@drawable/buttonround"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/number02">

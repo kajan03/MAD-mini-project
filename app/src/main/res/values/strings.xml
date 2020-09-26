@@ -32,7 +32,7 @@
     <string name="expire">EXPIRE DATE</string>
     <string name="cvv1">CVV</string>
     <string name="view">VIEW CARD</string>
-    <string name="proceed1">PROCEED</string>
+    <string name="proceed1">CONFIRM PAYMENT</string>
     <string name="cancel1">Cancel</string>
     <string name="edit">EDIT SHIPPING DETAILS</string>
 
@@ -52,7 +52,7 @@
 
     //Strings of Payment confirmation
     <string name="confirm">PURCHASE CONFIRMATION</string>
-    <string name="cpayment">CONFIRM PAYMENT</string>
+    <string name="cpayment">PROCEED TO SHIPPING</string>
     <string name="cancel4">Canncel</string>
     <string name="addpromo">CHECK FOR DISCOUNT CODE</string>
     <string name="Totalamount">Total Amount</string>
