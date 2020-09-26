@@ -45,9 +45,9 @@
         app:layout_constraintVertical_bias="0.065" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="400dp"
-        android:layout_height="60dp"
+        android:id="@+id/ProductName"
+        android:layout_width="373dp"
+        android:layout_height="64dp"
         android:background="@drawable/custom_stroke_radius_button"
         android:ems="10"
         android:hint="Enter Product Name"
@@ -58,15 +58,14 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.727"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.148" />
+        app:layout_constraintVertical_bias="0.163" />
 
     <EditText
         android:id="@+id/Brand"
-        android:layout_width="400dp"
-        android:layout_height="60dp"
+        android:layout_width="379dp"
+        android:layout_height="61dp"
         android:background="@drawable/custom_stroke_radius_button"
         android:ems="10"
         android:hint="Enter Brand Name"
@@ -77,18 +76,17 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.268" />
+        app:layout_constraintVertical_bias="0.295" />
 
     <EditText
-        android:id="@+id/Category"
-        android:layout_width="400dp"
-        android:layout_height="60dp"
+        android:id="@+id/Price"
+        android:layout_width="379dp"
+        android:layout_height="61dp"
         android:background="@drawable/custom_stroke_radius_button"
         android:ems="10"
-        android:hint="Choose Category"
+        android:hint="Enter Product Price"
         android:inputType="textPersonName"
         android:padding="20dp"
         android:textColorHint="#B9B4B4"
@@ -96,25 +94,15 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.593"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
-
-    <Spinner
-        android:id="@+id/spinner4"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.924"
-        app:layout_constraintStart_toStartOf="@+id/Category"
-        app:layout_constraintTop_toBottomOf="@+id/Brand" />
+        app:layout_constraintVertical_bias="0.679" />
 
     <EditText
         android:id="@+id/Color"
-        android:layout_width="400dp"
-        android:layout_height="60dp"
+        android:layout_width="381dp"
+        android:layout_height="56dp"
         android:background="@drawable/custom_stroke_radius_button"
         android:ems="10"
         android:hint="Choose Colour"
@@ -125,21 +113,19 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.428" />
 
     <Spinner
         android:id="@+id/spinner5"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.924"
-        app:layout_constraintStart_toStartOf="@+id/Category"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.408" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -254,16 +240,16 @@
         android:id="@+id/toolbar2"
         android:layout_width="293dp"
         android:layout_height="122dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/custom_stroke_radius_button"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/Price" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/imgupload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -284,10 +270,10 @@
         app:layout_constraintEnd_toEndOf="@+id/toolbar2"
         app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="@+id/toolbar2"
-        app:layout_constraintTop_toTopOf="@+id/imageButton4" />
+        app:layout_constraintTop_toTopOf="@+id/imgupload" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/AddProductButton"
         android:layout_width="158dp"
         android:layout_height="47dp"
         android:layout_marginTop="20dp"
@@ -295,7 +281,7 @@
         android:text="@string/AddProduct"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
 
