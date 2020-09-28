@@ -64,4 +64,18 @@
     <string name="Kids">Kids</string>
     <string name="Edit">Edit</string>
     <string name="Del">Delete</string>
+    <string name="Logout">Logout</string>
+
+    <string name="M10">Username</string>
+    <string name="M11">Password</string>
+    <string name="M4">Login</string>
+    <string name="M12">Email</string>
+    <string name="M13">Address</string>
+    <string name="M14">Contact No</string>
+    <string name="M25">Create your Account</string>
+    <string name="M1">Log in to your Account</string>
+    <string name="M3">LOG IN</string>
+    <string name="M40">CREATE ACCOUNT</string>
+
+
 </resources>
