@@ -1,5 +1,5 @@
 <resources>
-
+    <string name="myapp">Checkout</string>
     <string name="app_name">Men</string>
     <string name="Category1">Men</string>
     <string name="Shirt1">Hollister</string>
