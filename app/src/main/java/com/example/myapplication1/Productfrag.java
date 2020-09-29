@@ -10,10 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.myapplication1.Model.Product;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 
@@ -28,6 +30,7 @@ public class Productfrag extends Fragment {
     RecyclerView recview;
     myadapter adapter;
     FloatingActionButton fab;
+    Button Logout;
 
 
 
@@ -77,6 +80,19 @@ public class Productfrag extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(),AddCategory.class));
+            }
+        });
+
+        Logout = (Button)view.findViewById(R.id.logout);
+
+        Logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getActivity(),Login.class));
+                getActivity().finish();
+
+
             }
         });
 
