@@ -192,22 +192,22 @@ public class Payment extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try{
-                    if(TextUtils.isEmpty(e1.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter your Card Number",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(e2.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter your Card Number",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(e3.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter your Card Number",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(e4.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter your Card Number",Toast.LENGTH_SHORT).show();
+                    if(TextUtils.isEmpty(e1.getText().toString()) || e1.length() < 4)
+                        Toast.makeText(getApplicationContext(),"Please enter valid Card Number",Toast.LENGTH_SHORT).show();
+                    else if(TextUtils.isEmpty(e2.getText().toString()) || e2.length() < 4)
+                        Toast.makeText(getApplicationContext(),"Please enter valid Card Number",Toast.LENGTH_SHORT).show();
+                    else if(TextUtils.isEmpty(e3.getText().toString()) || e3.length() < 4)
+                        Toast.makeText(getApplicationContext(),"Please enter valid Card Number",Toast.LENGTH_SHORT).show();
+                    else if(TextUtils.isEmpty(e4.getText().toString()) || e4.length() < 4)
+                        Toast.makeText(getApplicationContext(),"Please enter valid Card Number",Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(e5.getText().toString()))
                         Toast.makeText(getApplicationContext(),"Please enter your Name",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(e6.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter expire month",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(e7.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter expire year",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(e8.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter your Card CVV",Toast.LENGTH_SHORT).show();
+                    else if(TextUtils.isEmpty(e6.getText().toString()) || Integer.parseInt(e6.getText().toString()) > 12)
+                        Toast.makeText(getApplicationContext(),"Please enter valid expire month",Toast.LENGTH_SHORT).show();
+                    else if(TextUtils.isEmpty(e7.getText().toString()) || Integer.parseInt(e7.getText().toString()) <20)
+                        Toast.makeText(getApplicationContext(),"Please enter valid expire year",Toast.LENGTH_SHORT).show();
+                    else if(TextUtils.isEmpty(e8.getText().toString()) || e8.length()<3)
+                        Toast.makeText(getApplicationContext(),"Please enter valid Card CVV",Toast.LENGTH_SHORT).show();
                     else{
                         DPay.setCard1(Integer.parseInt(e1.getText().toString().trim()));
                         DPay.setCard2(Integer.parseInt(e2.getText().toString().trim()));
