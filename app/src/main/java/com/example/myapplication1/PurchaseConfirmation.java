@@ -55,12 +55,12 @@ public class PurchaseConfirmation extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Context context = getApplicationContext();
-                    CharSequence message = "Payment Cancled";
+                    CharSequence message = "Payment Canceled, Moving to Items";
                     int duration = Toast.LENGTH_SHORT;
                     Toast toast = Toast.makeText(context, message, duration);
                     toast.show();
 
-                    Intent intent = new Intent(PurchaseConfirmation.this,ShippingDetails.class);
+                    Intent intent = new Intent(PurchaseConfirmation.this,home.class);
                     startActivity(intent);
                 }
             });

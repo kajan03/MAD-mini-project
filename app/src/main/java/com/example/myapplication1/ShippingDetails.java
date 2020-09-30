@@ -129,6 +129,20 @@ public class ShippingDetails extends AppCompatActivity {
             }
         });
 
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = getApplicationContext();
+                CharSequence message = "Shipping Canceled, Moving to Items";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, message, duration);
+                toast.show();
+
+                Intent intent = new Intent(ShippingDetails.this,home.class);
+                startActivity(intent);
+            }
+        });
+
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

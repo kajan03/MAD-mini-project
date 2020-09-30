@@ -125,12 +125,12 @@ public class Payment extends AppCompatActivity {
             @Override
             public void onClick(View view) { //Cancel button
                 Context context = getApplicationContext(); //The context to use. Usually your Application or Activity object
-                CharSequence message = "Payment Cancled";//Display string
+                CharSequence message = "Payment Canceled, Moving to Items";//Display string
                 int duration = Toast.LENGTH_SHORT; //How long the toast message will lasts
                 Toast toast = Toast.makeText(context, message, duration);
                 toast.show();
 
-                Intent intent = new Intent(Payment.this,ShippingDetails.class);
+                Intent intent = new Intent(Payment.this,MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -170,14 +170,14 @@ public class Payment extends AppCompatActivity {
     public void addNotification(){
 
 
-        Intent intent = new Intent(this, ShippingDetails.class);
+        Intent intent = new Intent(this, home.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_launcher_background)
-                .setContentTitle("Purchase Confirmation")
-                .setContentText("You have successfully made your purchase!")
+                .setContentTitle("You have successfully made your purchase!")
+                .setContentText("Your item(s) will be shipped in a day")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true);
