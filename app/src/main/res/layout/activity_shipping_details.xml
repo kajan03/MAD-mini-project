@@ -90,6 +90,7 @@
         android:layout_width="380dp"
         android:layout_height="match_parent"
         android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         app:cardBackgroundColor="#FCEBEB"
         app:cardCornerRadius="30dp">
 
@@ -377,7 +378,7 @@
                     <Button
                         android:id="@+id/proceed"
                         android:layout_width="180dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="60dp"
                         android:layout_marginStart="5dp"
                         android:layout_marginLeft="150dp"
                         android:layout_marginTop="30dp"
@@ -399,10 +400,10 @@
                     <Button
                         android:id="@+id/cancel"
                         android:layout_width="180dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="60dp"
                         android:layout_marginStart="1dp"
                         android:layout_marginLeft="150dp"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="40dp"
                         android:layout_marginEnd="150dp"
                         android:layout_marginRight="150dp"
                         android:layout_marginBottom="10dp"
