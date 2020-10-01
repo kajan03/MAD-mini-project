@@ -83,6 +83,7 @@
         android:layout_width="380dp"
         android:layout_height="match_parent"
         android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         app:cardBackgroundColor="#FCEBEB"
         app:cardCornerRadius="30dp">
 
@@ -370,10 +371,10 @@
                     <Button
                         android:id="@+id/shipcancel"
                         android:layout_width="100dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="80dp"
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="150dp"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="34dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="150dp"
                         android:layout_marginBottom="10dp"
@@ -391,8 +392,8 @@
 
                     <Button
                         android:id="@+id/viewshipping"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="110dp"
+                        android:layout_height="80dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="150dp"
                         android:layout_marginTop="18dp"
@@ -414,10 +415,10 @@
                     <Button
                         android:id="@+id/deleteship"
                         android:layout_width="100dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="80dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="150dp"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="34dp"
                         android:layout_marginEnd="150dp"
                         android:layout_marginRight="150dp"
                         android:layout_marginBottom="10dp"
