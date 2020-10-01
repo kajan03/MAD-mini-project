@@ -216,7 +216,6 @@ public class Payment extends AppCompatActivity {
                         DPay.setName(e5.getText().toString().trim());
                         DPay.setMonth(Integer.parseInt(e6.getText().toString().trim()));
                         DPay.setYear(Integer.parseInt(e7.getText().toString().trim()));
-                        DPay.setCvv(Integer.parseInt(e8.getText().toString().trim()));
 
                         dbref.child(String.valueOf(maxid+1)).setValue(DPay); // add to database with auto increment id
 
