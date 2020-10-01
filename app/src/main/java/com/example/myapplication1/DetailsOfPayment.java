@@ -8,7 +8,7 @@ public class DetailsOfPayment {
     private String name;
     private int month;
     private int year;
-    private int cvv;
+
 
     public DetailsOfPayment() {
     }
@@ -69,12 +69,6 @@ public class DetailsOfPayment {
         this.year = year;
     }
 
-    public int getCvv() {
-        return cvv;
-    }
 
-    public void setCvv(int cvv) {
-        this.cvv = cvv;
-    }
 }
 
