@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdminDashboard"></activity>
+        <activity android:name=".AdminDashboard"/>
         <activity android:name=".AddCategory" />
         <activity android:name=".Homeactivity" />
         <activity android:name=".home" />
@@ -27,46 +27,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".Signup" />
-        <activity
-            android:name=".DeleteShipping"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".DeletePayment"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".viewshippingdetails"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".viewpaymentdetails"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".viewcodedetails"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ViewPaymentShipping"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ShippingDetails"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".PurchaseConfirmation"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".DeleteShipping" android:screenOrientation="portrait" />
+        <activity android:name=".DeletePayment" android:screenOrientation="portrait" />
+        <activity android:name=".viewshippingdetails" android:screenOrientation="portrait" />
+        <activity android:name=".viewpaymentdetails" android:screenOrientation="portrait" />
+        <activity android:name=".viewcodedetails" android:screenOrientation="portrait" />
+        <activity android:name=".ViewPaymentShipping" android:screenOrientation="portrait" />
+        <activity android:name=".ShippingDetails" android:screenOrientation="portrait" />
+        <activity android:name=".PurchaseConfirmation" android:screenOrientation="portrait"/>
+        <activity android:name=".Payment" android:screenOrientation="portrait" />
+        <activity android:name=".AddCode" android:screenOrientation="portrait" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Payment"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".AddCode"
-            android:screenOrientation="portrait" />
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
