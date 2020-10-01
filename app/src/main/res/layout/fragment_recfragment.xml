@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/frameLayout">
+    android:id="@+id/drawer"
+    tools:context=".Homeactivity"
+    tools:openDrawer="start">
 
 
 
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+<androidx.appcompat.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/toolbar"
+
+    android:background="@color/colorPrimaryDark"
+
+    />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/homerecview"
         android:layout_width="wrap_content"
@@ -18,32 +31,49 @@ android:layout_marginTop="60dp"
          />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/menuicon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_rectangle_navi"
-        tools:layout_conversion_absoluteHeight="51dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_conversion_absoluteWidth="411dp" />
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/ic_gg_menu_left" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/carticon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_gg_menu_left"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="8dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        app:srcCompat="@drawable/ic_fa_solid_shopping_cart" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Albito"
+        android:fontFamily="@font/pinyon_script"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
          />
 
-    <Button
-        android:id="@+id/logoutBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Logout"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="40dp"
-        android:layout_marginLeft="150dp"/>
-
-
 </FrameLayout>
+
+   <com.google.android.material.navigation.NavigationView
+       android:id="@+id/navmenu"
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       app:menu="@menu/navigation_menu"
+       android:layout_gravity="start"
+       app:itemIconTint="@color/colorPrimaryDark"
+       app:headerLayout="@layout/layout_navibar_header"
+
+       />
+
+
+       />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

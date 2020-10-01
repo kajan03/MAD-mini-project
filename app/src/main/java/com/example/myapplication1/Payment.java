@@ -103,7 +103,7 @@ public class Payment extends AppCompatActivity {
 
         b1 = findViewById(R.id.proceed1);
         b2 = findViewById(R.id.cancel1);
-        b3 = findViewById(R.id.edit);
+        b3 = findViewById(R.id.save);
 
         dbref = FirebaseDatabase.getInstance().getReference().child("DetailsOfPayment");
         dbref.addValueEventListener(new ValueEventListener() {

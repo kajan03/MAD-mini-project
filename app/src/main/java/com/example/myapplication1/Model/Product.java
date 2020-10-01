@@ -48,7 +48,7 @@ private String name,brand,price,image,pid,category,date,time,color;
     }
 
     public void setPrice(String price) {
-        this.price ="Rs"+ price;
+        this.price = price;
     }
 
     public String getImage() {
