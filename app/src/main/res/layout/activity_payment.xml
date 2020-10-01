@@ -391,7 +391,7 @@
                     </LinearLayout>
 
                     <Button
-                        android:id="@+id/edit"
+                        android:id="@+id/save"
                         android:layout_width="251dp"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/linear1"

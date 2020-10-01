@@ -104,7 +104,7 @@ public class Signup extends AppCompatActivity {
                             }
                             df.set(userInfo);
                            if(isAdminBox.isChecked()){
-                               startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                               startActivity(new Intent(getApplicationContext(),AdminDashboard.class));
                                finish();
                            }
 

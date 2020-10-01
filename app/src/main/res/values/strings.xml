@@ -42,6 +42,8 @@
     <string name="Orders">Orders</string>
     <string name="Categories">Categories</string>
     <string name="Settings">Settings</string>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
 
 
     <string name="Profile">Profile</string>
@@ -76,8 +78,6 @@
     <string name="M4">Login</string>
 
     <string name="M40">CREATE ACCOUNT</string>
-
-
 
 
     //Strings of DEEPIKA
@@ -176,6 +176,13 @@
     <string name="deletepayment">DELETE</string>
     <string name="cancelpaymentdel">Cancel</string>
     <string name="Logout">Logout</string>
+    <string name="Save">Save</string>
+    <string name="Albito">Albito</string>
+    <string name="Products">Products</string>
+    <string name="Feedback">Feedback</string>
+    <string name="Shipping">Shipping</string>
+    <string name="Payment">Payment</string>
+    <string name="Discount">Discount</string>
     //End of String of DEEPIKA
 
 </resources>
