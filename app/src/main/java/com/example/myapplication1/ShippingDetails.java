@@ -138,7 +138,7 @@ public class ShippingDetails extends AppCompatActivity {
                 Toast toast = Toast.makeText(context, message, duration);
                 toast.show();
 
-                Intent intent = new Intent(ShippingDetails.this,home.class);
+                Intent intent = new Intent(ShippingDetails.this,Homeactivity.class);
                 startActivity(intent);
             }
         });
