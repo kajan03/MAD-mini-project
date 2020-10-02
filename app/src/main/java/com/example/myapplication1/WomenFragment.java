@@ -4,56 +4,44 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.example.myapplication1.Model.Product;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 
-public class Homefrag extends Fragment {
+public class WomenFragment extends Fragment {
+
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
     private String mParam1;
     private String mParam2;
-    RecyclerView homerecview;
-    Homeadapter adapter;
-    Button Logout;
+    RecyclerView womenrecview;
+    WomenAdapter adapter;
     ImageView menuicon;
-    DrawerLayout drawerLayout;
     NavigationView nav;
 
-
-
-
-    public Homefrag() {
-
+    public WomenFragment() {
     }
 
 
-    public static Homefrag newInstance(String param1, String param2) {
-        Homefrag fragment = new Homefrag();
+    public static WomenFragment newInstance(String param1, String param2) {
+        WomenFragment fragment = new WomenFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -68,29 +56,18 @@ public class Homefrag extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState)  {
-
-        View view= inflater.inflate(R.layout.fragment_recfragment, container, false);
-        homerecview = (RecyclerView)view.findViewById(R.id.homerecview);
-        homerecview.setLayoutManager(new GridLayoutManager(getContext(),2));
-
-
-
-        Logout = (Button)view.findViewById(R.id.logoutBtn);
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view=inflater.inflate(R.layout.fragment_women, container, false);
+   womenrecview = (RecyclerView)view.findViewById(R.id.womenrecview);
+   womenrecview.setLayoutManager(new GridLayoutManager(getContext(),2));
         menuicon = (ImageView)view.findViewById(R.id.menuicon);
         nav = (NavigationView)view.findViewById(R.id.navmenu);
         final DrawerLayout drawerLayout = view.findViewById(R.id.drawer);
-
-
-
-
 
 
         menuicon.setOnClickListener(new View.OnClickListener() {
@@ -143,26 +120,16 @@ public class Homefrag extends Fragment {
             }
         });
 
-
-
-
-
-        FirebaseRecyclerOptions<Product>options=
+        FirebaseRecyclerOptions<Product> options=
                 new FirebaseRecyclerOptions.Builder<Product>()
-                .setQuery(FirebaseDatabase.getInstance().getReference().child("Products"),Product.class)
-                .build();
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Products").orderByChild("category").equalTo("Women"),Product.class)
+                        .build();
 
-        adapter = new Homeadapter(options);
-        homerecview.setAdapter(adapter);
-
-
+       adapter = new WomenAdapter(options);
+       womenrecview.setAdapter(adapter);
 
         return view;
     }
-
-
-
-
 
     @Override
     public void onStart() {

@@ -12,7 +12,8 @@
 
 <FrameLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
 <androidx.appcompat.widget.Toolbar
     android:layout_width="match_parent"
@@ -22,11 +23,13 @@
     android:background="@color/colorPrimaryDark"
 
     />
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/homerecview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-android:layout_marginTop="60dp"
+android:layout_marginTop="90dp"
 
          />
 
@@ -59,6 +62,9 @@ android:layout_marginTop="60dp"
         android:layout_gravity="center_horizontal"
          />
 
+
+
+
 </FrameLayout>
 
    <com.google.android.material.navigation.NavigationView
@@ -68,9 +74,9 @@ android:layout_marginTop="60dp"
        app:menu="@menu/navigation_menu"
        android:layout_gravity="start"
        app:itemIconTint="@color/colorPrimaryDark"
-       app:headerLayout="@layout/layout_navibar_header"
+       app:headerLayout="@layout/layout_navibar_header"/>
 
-       />
+
 
 
        />
