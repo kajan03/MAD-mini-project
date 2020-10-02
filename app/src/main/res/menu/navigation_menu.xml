@@ -2,18 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/menuProfile"
         android:title="@string/Profile"
-        android:icon="@drawable/profile"
+        android:icon="@drawable/ic_baseline_person_24"
         />
 
 
 
     <item android:id="@+id/menuCategory"
-        android:title="@string/Categories"
+        android:title="Clothes"
         android:icon="@drawable/catogoryicon">
 
         <menu>
-            <item android:id="@+id/menuTshirt"
-                android:title="@string/Tshirts"
+            <item android:id="@+id/menuMen"
+                android:title="@string/Men"
+                android:icon="@drawable/tshirticon"
+                />
+
+            <item android:id="@+id/menuWomen"
+                android:title="@string/Women"
+                android:icon="@drawable/tshirticon"
+                />
+
+            <item android:id="@+id/menuKids"
+                android:title="@string/Kids"
                 android:icon="@drawable/tshirticon"
                 />
 
@@ -21,7 +31,11 @@
     </item>
 
 
+    <item android:id="@+id/menuOptions"
+        android:title="Others"
+        android:icon="@drawable/catogoryicon">
 
+        <menu>
     <item android:id="@+id/menuCart"
         android:title="@string/Orders"
         android:icon="@drawable/carticon"
@@ -37,4 +51,6 @@
         android:icon="@drawable/logouticon"
         />
 
+</menu>
+    </item>
 </menu>

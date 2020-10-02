@@ -3,17 +3,30 @@ package com.example.myapplication1;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.myapplication1.Model.Product;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 
@@ -26,7 +39,13 @@ public class Homefrag extends Fragment {
     private String mParam2;
     RecyclerView homerecview;
     Homeadapter adapter;
-    FloatingActionButton cart_float_btn;
+    Button Logout;
+    ImageView menuicon;
+    DrawerLayout drawerLayout;
+    NavigationView nav;
+
+
+
 
     public Homefrag() {
 
@@ -56,24 +75,73 @@ public class Homefrag extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)  {
 
         View view= inflater.inflate(R.layout.fragment_recfragment, container, false);
         homerecview = (RecyclerView)view.findViewById(R.id.homerecview);
+        homerecview.setLayoutManager(new GridLayoutManager(getContext(),2));
 
-        /*          sid         */
-        cart_float_btn = (FloatingActionButton) view.findViewById(R.id.cart_float_btn);
 
-        cart_float_btn.setOnClickListener(new View.OnClickListener() {
+
+        Logout = (Button)view.findViewById(R.id.logoutBtn);
+        menuicon = (ImageView)view.findViewById(R.id.menuicon);
+        nav = (NavigationView)view.findViewById(R.id.navmenu);
+        final DrawerLayout drawerLayout = view.findViewById(R.id.drawer);
+
+
+
+
+
+
+        menuicon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),CartActivity.class);
-                startActivity(intent);
+                drawerLayout.openDrawer(GravityCompat.START);
             }
         });
 
+        nav.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item)
+            {
+                switch (item.getItemId())
+                {
+                    case R.id.menuCart:
+                        startActivity(new Intent(getActivity(),AddCategory.class));
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
 
-        homerecview.setLayoutManager(new GridLayoutManager(getContext(),2));
+                    case R.id.menuMen:
+                        startActivity(new Intent(getActivity(),MenActivity.class));
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
+                    case R.id.menuWomen:
+                        startActivity(new Intent(getActivity(),WomenActivity.class));
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
+                    case R.id.menuKids:
+                        startActivity(new Intent(getActivity(),KidsActivity.class));
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
+                   /* case R.id.menuProfile:
+                        startActivity(new Intent(getActivity(),ProfileUser.class));
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;*/
+                    case R.id.menuLogout:
+                        FirebaseAuth.getInstance().signOut();
+                        startActivity(new Intent(getActivity(),Login.class));
+                        getActivity().finish();
+
+
+
+
+                }
+                return true;
+            }
+        });
 
 
 
@@ -86,6 +154,8 @@ public class Homefrag extends Fragment {
 
         adapter = new Homeadapter(options);
         homerecview.setAdapter(adapter);
+
+
 
         return view;
     }
