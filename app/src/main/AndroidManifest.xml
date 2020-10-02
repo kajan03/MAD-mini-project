@@ -31,13 +31,20 @@
         <activity android:name=".Profile" />
         <activity android:name=".Adimin" />
         <activity android:name=".Login">
+
+        </activity>
+        <activity android:name=".Signup" />
+
+        <activity android:name=".FeedbackMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Signup" />
+        <activity android:name=".Feedback">
+
+        </activity>
 
         <activity android:name=".DeleteShipping" android:screenOrientation="portrait"/>
         <activity android:name=".DeletePayment" android:screenOrientation="portrait" />
@@ -48,11 +55,7 @@
 
         <activity android:name=".ShippingDetails" android:screenOrientation="portrait"/>
         <activity android:name=".PurchaseConfirmation" android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Payment" android:screenOrientation="portrait" />
         <activity android:name=".AddCode" android:screenOrientation="portrait" />
