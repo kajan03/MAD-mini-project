@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -22,6 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 public class DeletePayment extends AppCompatActivity {
     Button bttn2,deletepayment,buttonsearch,btview;
     EditText text1,text2,text3,text4,text5,text6,text7,textpay;
+    TextView t1;
     DetailsOfPayment DPay;
     DatabaseReference dbref;
     int searchID;
@@ -36,6 +38,7 @@ public class DeletePayment extends AppCompatActivity {
         text6.setText("");
         text7.setText("");
         textpay.setText("");
+        t1.setText("");
     }
 
     @Override
@@ -50,6 +53,7 @@ public class DeletePayment extends AppCompatActivity {
         text5 = findViewById(R.id.text5);
         text6 = findViewById(R.id.text6);
         text7 = findViewById(R.id.text7);
+        t1 = findViewById(R.id.tot1);
         textpay = findViewById(R.id.textpay);
 
         bttn2 = findViewById(R.id.cancelpaymentdel);
@@ -114,6 +118,7 @@ public class DeletePayment extends AppCompatActivity {
                                 text5.setText((ds.child("name").getValue().toString()));
                                 text6.setText((ds.child("month").getValue().toString()));
                                 text7.setText((ds.child("year").getValue().toString()));
+                                t1.setText((ds.child("amount").getValue().toString()));
 
                             }
                         }
