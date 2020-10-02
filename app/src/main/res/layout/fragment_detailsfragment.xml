@@ -54,43 +54,43 @@
             android:textSize="20sp"
             android:textColor="@color/colorPrimary"/>
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:layout_marginTop="20dp">
+        <!--sid-->
 
-
-
-        <TextView
-            android:id="@+id/pricers"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp"
+            >
 
-            android:fontFamily="@font/orienta"
-            android:text="Rs"
-            android:textColor="#605857"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/pricers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/orienta"
+                android:text="Rs"
+                android:textColor="#605857"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/priceholder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="30dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
+            <TextView
+                android:id="@+id/priceholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/orienta"
+                android:text="Price"
+                android:textColor="#605857"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
 
-        android:fontFamily="@font/orienta"
-        android:text="Price"
-        android:textColor="#605857"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-</LinearLayout>
+        </LinearLayout>
 
         <Button
             android:id="@+id/addtocartbtn"
@@ -98,6 +98,5 @@
             android:layout_height="wrap_content"
             android:text="Add To Cart" />
 
-
-    </LinearLayout>
+        </LinearLayout>
 </FrameLayout>

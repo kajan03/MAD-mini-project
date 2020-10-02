@@ -154,6 +154,8 @@ public class myadapter extends FirebaseRecyclerAdapter<Product,myadapter.myviewh
             brand = itemView.findViewById(R.id.brand);
             price = itemView.findViewById(R.id.price);
 
+
+
             editbtn = itemView.findViewById(R.id.editbtn);
             delbtn = itemView.findViewById(R.id.delbtn);
         }

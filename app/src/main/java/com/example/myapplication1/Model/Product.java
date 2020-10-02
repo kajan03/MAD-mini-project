@@ -2,12 +2,23 @@ package com.example.myapplication1.Model;
 
 public class Product {
 
-private String name,brand,price,image,pid,category,date,time,color;
+    private String name;
+    private String brand;
+    private String price;
+    private String image;
+    private String pid;
+    private String category;
+    private String date;
+    private String time;
+    private String color;
+
+
 
     public Product() {
     }
 
-    public Product(String name, String brand, String price, String image, String pid, String category, String date, String time, String color) {
+    public Product(String name, String brand, String price, String image, String pid, String category, String date, String time, int quantity,
+                   String color) {
         this.name = name;
         this.brand = brand;
         this.price = price;
@@ -90,4 +101,5 @@ private String name,brand,price,image,pid,category,date,time,color;
     public void setTime(String time) {
         this.time = time;
     }
+
 }
