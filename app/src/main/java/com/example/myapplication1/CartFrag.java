@@ -1,6 +1,7 @@
 package com.example.myapplication1;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -85,6 +86,15 @@ public class CartFrag extends Fragment {
 
         cart_list.setHasFixedSize(true);
         cart_list.setLayoutManager(new LinearLayoutManager(getContext()));
+
+
+        nxt_process_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),PurchaseConfirmation.class);
+                startActivity(intent);
+            }
+        });
 
         cartListRef.addValueEventListener(new ValueEventListener() {
             @Override
