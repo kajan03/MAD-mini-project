@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdminDashboard"></activity>
+        <activity android:name=".KidsActivity"></activity>
+        <activity android:name=".WomenActivity"></activity>
+        <activity
+            android:name=".MenActivity"
+            android:label="@string/title_activity_men"></activity>
+        <activity android:name=".AdminDashboard" />
         <activity android:name=".AddCategory" />
         <activity android:name=".Homeactivity" />
         <activity android:name=".home" />
