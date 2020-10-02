@@ -40,7 +40,7 @@ public class Homefrag extends Fragment {
     RecyclerView homerecview;
     Homeadapter adapter;
     Button Logout;
-    ImageView menuicon;
+    ImageView menuicon,carticon;
     DrawerLayout drawerLayout;
     NavigationView nav;
 
@@ -83,15 +83,20 @@ public class Homefrag extends Fragment {
 
 
 
+        carticon = (ImageView)view.findViewById(R.id.carticon);
         Logout = (Button)view.findViewById(R.id.logoutBtn);
         menuicon = (ImageView)view.findViewById(R.id.menuicon);
         nav = (NavigationView)view.findViewById(R.id.navmenu);
         final DrawerLayout drawerLayout = view.findViewById(R.id.drawer);
 
+        carticon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),CartActivity.class);
+                startActivity(intent);
 
-
-
-
+            }
+        });
 
         menuicon.setOnClickListener(new View.OnClickListener() {
             @Override
