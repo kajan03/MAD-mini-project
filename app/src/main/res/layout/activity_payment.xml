@@ -30,7 +30,7 @@
             android:id="@+id/rl1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="9dp"
+            android:layout_marginTop="4dp"
             android:gravity="center">
 
             <ImageView
@@ -179,7 +179,7 @@
             android:layout_height="500dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="6dp"
             app:cardBackgroundColor="#FCEBEB"
             app:cardCornerRadius="30dp">
 
@@ -348,11 +348,37 @@
                         android:textColorHint="#969698"
                         android:textSize="20dp" />
 
+                    <TextView
+                        android:id="@+id/finalamt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FINAL AMOUNT"
+                        android:layout_below="@+id/cvv1"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="cursive"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/finalamt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FINAL"
+                        android:layout_below="@+id/text8"
+                        android:layout_marginStart="180dp"
+                        android:layout_marginTop="17dp"
+                        android:fontFamily="cursive"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
                     <Button
                         android:id="@+id/view"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/text8"
+                        android:layout_below="@+id/finalamt"
                         android:layout_marginTop="5dp"
                         android:background="@drawable/buttonround"
                         android:backgroundTint="#BDE0FC"
