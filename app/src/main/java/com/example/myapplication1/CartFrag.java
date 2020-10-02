@@ -42,6 +42,7 @@ public class CartFrag extends Fragment {
     ImageView img_prod;
 
     int sum=0;
+    String total;
 
 
     public CartFrag() {
@@ -88,13 +89,7 @@ public class CartFrag extends Fragment {
         cart_list.setLayoutManager(new LinearLayoutManager(getContext()));
 
 
-        nxt_process_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),PurchaseConfirmation.class);
-                startActivity(intent);
-            }
-        });
+
 
         cartListRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -114,6 +109,18 @@ public class CartFrag extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        nxt_process_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                total = totalamount.getText().toString();
+                Intent intent = new Intent(getActivity(),PurchaseConfirmation.class);
+                intent.putExtra("Value",total);
+                startActivity(intent);
+                getActivity().finish();
+
 
             }
         });
