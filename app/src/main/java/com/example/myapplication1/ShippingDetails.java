@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -25,9 +26,11 @@ public class ShippingDetails extends AppCompatActivity {
     EditText txtfName,txtlName,txtadd1,txtadd2,txtcity,txtpcode,txtpno,txtemail,txtsearch;
     Button btn1,btn2,btn3;
     DetailsOfShipping DShip;
+    TextView t1;
     DatabaseReference dbref;
     int searchID;
     long maxid = 0;
+    String finaltot,finaltotal;
 
 
     private void clearControls(){
@@ -56,7 +59,12 @@ public class ShippingDetails extends AppCompatActivity {
         txtpno = findViewById(R.id.text7);
         txtemail = findViewById(R.id.text8);
         txtsearch = findViewById(R.id.text);
+        t1 = findViewById(R.id.data);
 
+        Bundle b = getIntent().getExtras();
+        assert b != null;
+        finaltot = b.getString("finalTotal1");
+        t1.setText(String.valueOf(finaltot));
 
         btn1 = findViewById(R.id.proceed);
         btn2 = findViewById(R.id.cancel);
@@ -116,8 +124,13 @@ public class ShippingDetails extends AppCompatActivity {
 
                         Toast.makeText(getApplicationContext(),"Data Saved Successfully, Proseeding to Payment",Toast.LENGTH_SHORT).show();
                         clearControls();
+
+                        finaltotal = t1.getText().toString();
                         Intent intent = new Intent(ShippingDetails.this,Payment.class);
+                        intent.putExtra("finaltotal",finaltotal);
                         startActivity(intent);
+                        finish();
+
                     }
                 }
                 catch(NumberFormatException e){
