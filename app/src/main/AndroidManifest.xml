@@ -9,10 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CartActivity"/>
-        <activity android:name=".KidsActivity"/>
-        <activity android:name=".WomenActivity"/>
-        <activity android:name=".MenActivity" android:label="@string/title_activity_men"/>
+        <activity android:name=".EditProfile"></activity>
+        <activity android:name=".ProfileUser">
+
+        </activity>
+        <activity android:name=".CartActivity" />
+        <activity android:name=".FeedbackMainActivity" />
+        <activity android:name=".Feedback" />
+        <activity android:name=".KidsActivity" />
+        <activity android:name=".WomenActivity" />
+        <activity
+            android:name=".MenActivity"
+            android:label="@string/title_activity_men" />
         <activity android:name=".AdminDashboard" />
         <activity android:name=".AddCategory" />
         <activity android:name=".Homeactivity" />
@@ -31,16 +39,36 @@
             </intent-filter>
         </activity>
         <activity android:name=".Signup" />
-        <activity android:name=".DeleteShipping" android:screenOrientation="portrait" />
-        <activity android:name=".DeletePayment" android:screenOrientation="portrait" />
-        <activity android:name=".viewshippingdetails" android:screenOrientation="portrait" />
-        <activity android:name=".viewpaymentdetails" android:screenOrientation="portrait" />
-        <activity android:name=".viewcodedetails" android:screenOrientation="portrait" />
-        <activity android:name=".ViewPaymentShipping" android:screenOrientation="portrait" />
-        <activity android:name=".ShippingDetails" android:screenOrientation="portrait" />
-        <activity android:name=".PurchaseConfirmation" android:screenOrientation="portrait"/>
-        <activity android:name=".Payment" android:screenOrientation="portrait" />
-        <activity android:name=".AddCode" android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeleteShipping"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeletePayment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".viewshippingdetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".viewpaymentdetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".viewcodedetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewPaymentShipping"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ShippingDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PurchaseConfirmation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Payment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddCode"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="preloaded_fonts"
