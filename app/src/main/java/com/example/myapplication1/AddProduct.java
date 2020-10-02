@@ -32,11 +32,10 @@ import java.util.HashMap;
 
 public class AddProduct extends AppCompatActivity {
 
-    private String CategoryName,Proname,Proprice,Probrand,Procolor,Prosize,savecurrentdate,savecurrenttime;
+    private String CategoryName,Proname,Proprice,Probrand,Procolor,savecurrentdate,savecurrenttime;
     private Button AddProduct;
     private ImageView imgupload;
     private EditText ProductName,Brand,Color,Price;
-    private CheckBox S,M,L,XL;
     private static final int gallerypick=1;
     private Uri ImageUri;
     private String productRandom, downloadimageurl;
@@ -57,10 +56,7 @@ public class AddProduct extends AppCompatActivity {
         Brand = (EditText) findViewById(R.id.Brand);
         Color = (EditText) findViewById(R.id.Color);
         Price = (EditText) findViewById(R.id.Price);
-        XL= (CheckBox) findViewById(R.id.checkBox);
-        L = (CheckBox) findViewById(R.id.checkBox1);
-        M = (CheckBox) findViewById(R.id.checkBox2);
-        S = (CheckBox) findViewById(R.id.checkBox3);
+
 
         imgupload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,10 +99,7 @@ public class AddProduct extends AppCompatActivity {
         Procolor = Color.getText().toString();
         Proprice = Price.getText().toString();
         Probrand = Brand.getText().toString();
-        Prosize = S.getText().toString();
-        Prosize = L.getText().toString();
-        Prosize = M.getText().toString();
-        Prosize = XL.getText().toString();
+
 
         if (ImageUri==null){
             Toast.makeText(this, "Image is Required", Toast.LENGTH_SHORT).show();

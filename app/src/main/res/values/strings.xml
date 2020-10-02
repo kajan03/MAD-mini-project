@@ -42,6 +42,8 @@
     <string name="Orders">Orders</string>
     <string name="Categories">Categories</string>
     <string name="Settings">Settings</string>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
 
 
     <string name="Profile">Profile</string>
@@ -74,18 +76,8 @@
     <string name="M25">Create your Account</string>
     <string name="M1">Log in to your Account</string>
     <string name="M4">Login</string>
-    <string name="M19">FEEDBACK</string>
-    <string name="M20">After using Albito for a bit now, how would you rate your experience?</string>
-    <string name="M7">Rate Us...</string>
-    <string name="M41">Edit Feedback</string>
-    <string name="M42">Enter username</string>
-    <string name="M44">Add Feedback</string>
-    <string name="M43">Leave your comments</string>
-    <string name="M45">Feedback</string>
 
     <string name="M40">CREATE ACCOUNT</string>
-
-
 
 
     //Strings of DEEPIKA
@@ -184,7 +176,19 @@
     <string name="deletepayment">DELETE</string>
     <string name="cancelpaymentdel">Cancel</string>
     <string name="Logout">Logout</string>
-    <string name="Addfeedback">Add</string>
+    <string name="Save">Save</string>
+    <string name="Albito">Albito</string>
+    <string name="Products">Products</string>
+    <string name="Feedback">Feedback</string>
+    <string name="Shipping">Shipping</string>
+    <string name="Payment">Payment</string>
+    <string name="Discount">Discount</string>
+    <string name="title_activity_men">MenActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
     //End of String of DEEPIKA
 
 </resources>

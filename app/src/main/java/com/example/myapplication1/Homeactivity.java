@@ -15,10 +15,6 @@ public class Homeactivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homeactivity);
 
-
-
-
-
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.home1,new Homefrag()).commit();

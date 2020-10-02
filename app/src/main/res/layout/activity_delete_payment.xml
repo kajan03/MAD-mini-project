@@ -87,6 +87,7 @@
             android:layout_width="380dp"
             android:layout_height="500dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_marginTop="20dp"
             app:cardBackgroundColor="#FCEBEB"
             app:cardCornerRadius="30dp">
@@ -233,7 +234,7 @@
                     <Button
                         android:id="@+id/deletepayment"
                         android:layout_width="100dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="70dp"
                         android:layout_below="@+id/expire"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="57dp"
@@ -255,7 +256,7 @@
                     <Button
                         android:id="@+id/cancelpaymentdel"
                         android:layout_width="100dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="70dp"
                         android:layout_below="@+id/expire"
                         android:layout_marginStart="260dp"
                         android:layout_marginTop="57dp"

@@ -69,7 +69,7 @@ public class AddCode extends AppCompatActivity {
                 try {
                     if (TextUtils.isEmpty(description.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Please enter a Description", Toast.LENGTH_SHORT).show();
-                    else if (TextUtils.isEmpty(code.getText().toString()))
+                    else if (TextUtils.isEmpty(code.getText().toString()) || code.length() > 5)
                         Toast.makeText(getApplicationContext(), "Please enter a Code", Toast.LENGTH_SHORT).show();
                     else {
                         DCode.setDescription(description.getText().toString().trim());

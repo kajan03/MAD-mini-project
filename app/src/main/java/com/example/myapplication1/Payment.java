@@ -103,7 +103,7 @@ public class Payment extends AppCompatActivity {
 
         b1 = findViewById(R.id.proceed1);
         b2 = findViewById(R.id.cancel1);
-        b3 = findViewById(R.id.edit);
+        b3 = findViewById(R.id.save);
 
         dbref = FirebaseDatabase.getInstance().getReference().child("DetailsOfPayment");
         dbref.addValueEventListener(new ValueEventListener() {
@@ -125,12 +125,12 @@ public class Payment extends AppCompatActivity {
             @Override
             public void onClick(View view) { //Cancel button
                 Context context = getApplicationContext(); //The context to use. Usually your Application or Activity object
-                CharSequence message = "Payment Cancled";//Display string
+                CharSequence message = "Payment Canceled, Moving to Items";//Display string
                 int duration = Toast.LENGTH_SHORT; //How long the toast message will lasts
                 Toast toast = Toast.makeText(context, message, duration);
                 toast.show();
 
-                Intent intent = new Intent(Payment.this,ShippingDetails.class);
+                Intent intent = new Intent(Payment.this,MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -170,14 +170,14 @@ public class Payment extends AppCompatActivity {
     public void addNotification(){
 
 
-        Intent intent = new Intent(this, ShippingDetails.class);
+        Intent intent = new Intent(this, home.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_launcher_background)
-                .setContentTitle("Purchase Confirmation")
-                .setContentText("You have successfully made your purchase!")
+                .setContentTitle("You have successfully made your purchase!")
+                .setContentText("Your item(s) will be shipped in a day")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true);
@@ -192,22 +192,22 @@ public class Payment extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try{
-                    if(TextUtils.isEmpty(e1.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter your Card Number",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(e2.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter your Card Number",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(e3.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter your Card Number",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(e4.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter your Card Number",Toast.LENGTH_SHORT).show();
+                    if(TextUtils.isEmpty(e1.getText().toString()) || e1.length() < 4)
+                        Toast.makeText(getApplicationContext(),"Please enter valid Card Number",Toast.LENGTH_SHORT).show();
+                    else if(TextUtils.isEmpty(e2.getText().toString()) || e2.length() < 4)
+                        Toast.makeText(getApplicationContext(),"Please enter valid Card Number",Toast.LENGTH_SHORT).show();
+                    else if(TextUtils.isEmpty(e3.getText().toString()) || e3.length() < 4)
+                        Toast.makeText(getApplicationContext(),"Please enter valid Card Number",Toast.LENGTH_SHORT).show();
+                    else if(TextUtils.isEmpty(e4.getText().toString()) || e4.length() < 4)
+                        Toast.makeText(getApplicationContext(),"Please enter valid Card Number",Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(e5.getText().toString()))
                         Toast.makeText(getApplicationContext(),"Please enter your Name",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(e6.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter expire month",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(e7.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter expire year",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(e8.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter your Card CVV",Toast.LENGTH_SHORT).show();
+                    else if(TextUtils.isEmpty(e6.getText().toString()) || Integer.parseInt(e6.getText().toString()) > 12)
+                        Toast.makeText(getApplicationContext(),"Please enter valid expire month",Toast.LENGTH_SHORT).show();
+                    else if(TextUtils.isEmpty(e7.getText().toString()) || Integer.parseInt(e7.getText().toString()) <20)
+                        Toast.makeText(getApplicationContext(),"Please enter valid expire year",Toast.LENGTH_SHORT).show();
+                    else if(TextUtils.isEmpty(e8.getText().toString()) || e8.length()<3)
+                        Toast.makeText(getApplicationContext(),"Please enter valid Card CVV",Toast.LENGTH_SHORT).show();
                     else{
                         DPay.setCard1(Integer.parseInt(e1.getText().toString().trim()));
                         DPay.setCard2(Integer.parseInt(e2.getText().toString().trim()));
@@ -216,7 +216,6 @@ public class Payment extends AppCompatActivity {
                         DPay.setName(e5.getText().toString().trim());
                         DPay.setMonth(Integer.parseInt(e6.getText().toString().trim()));
                         DPay.setYear(Integer.parseInt(e7.getText().toString().trim()));
-                        DPay.setCvv(Integer.parseInt(e8.getText().toString().trim()));
 
                         dbref.child(String.valueOf(maxid+1)).setValue(DPay); // add to database with auto increment id
 

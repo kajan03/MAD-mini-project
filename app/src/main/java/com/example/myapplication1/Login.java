@@ -85,7 +85,7 @@ public class Login extends AppCompatActivity {
                 if(documentSnapshot.getString("isAdmin")!= null){
                     //uer is admin
 
-                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    startActivity(new Intent(getApplicationContext(),AdminDashboard.class));
                     finish();
                 }
 
@@ -118,7 +118,7 @@ public class Login extends AppCompatActivity {
                 @Override
                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                     if(documentSnapshot.getString("isAdmin") != null){
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(),AdminDashboard.class));
                         finish();
                     }
 
