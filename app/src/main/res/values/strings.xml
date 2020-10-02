@@ -76,7 +76,14 @@
     <string name="M25">Create your Account</string>
     <string name="M1">Log in to your Account</string>
     <string name="M4">Login</string>
-
+    <string name="M19">FEEDBACK</string>
+    <string name="M20">After using Albito for a bit now, how would you rate your experience?</string>
+    <string name="M7">Rate Us...</string>
+    <string name="M41">Edit Feedback</string>
+    <string name="M42">Enter username</string>
+    <string name="M44">Add Feedback</string>
+    <string name="M43">Leave your comments</string>
+    <string name="M45">Feedback</string>
     <string name="M40">CREATE ACCOUNT</string>
 
 
