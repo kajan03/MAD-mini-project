@@ -219,9 +219,11 @@ public class Payment extends AppCompatActivity {
 
                         dbref.child(String.valueOf(maxid+1)).setValue(DPay); // add to database with auto increment id
 
-                        Toast.makeText(getApplicationContext(),"Paid Successfully",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Paid Successfully",Toast.LENGTH_LONG).show();
                         clearControls();
                         addNotification();
+                        Intent intent = new Intent(Payment.this,Homeactivity.class);
+                        startActivity(intent);
                     }
                 }
                 catch(NumberFormatException e){

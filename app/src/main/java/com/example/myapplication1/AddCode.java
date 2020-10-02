@@ -64,7 +64,7 @@ public class AddCode extends AppCompatActivity {
 
         btn6.setOnClickListener(new View.OnClickListener() { //create
             @Override
-            public void onClick(View view) { //Create
+            public void onClick(View view) { //Create code details
                 dbref = FirebaseDatabase.getInstance().getReference().child("DetailsOfCode");
                 try {
                     if (TextUtils.isEmpty(description.getText().toString()))
@@ -90,7 +90,7 @@ public class AddCode extends AppCompatActivity {
 
         btn10.setOnClickListener(new View.OnClickListener() { //search
             @Override
-            public void onClick(View view) { //Search by ID
+            public void onClick(View view) { //Search by ID (search by code of discount)
                 dbref = FirebaseDatabase.getInstance().getReference().child("DetailsOfCode");
                 searchID = search.getText().toString().trim();
                 DatabaseReference readRef = FirebaseDatabase.getInstance().getReference();
@@ -121,7 +121,7 @@ public class AddCode extends AppCompatActivity {
 
         btn5.setOnClickListener(new View.OnClickListener() { //update
             @Override
-            public void onClick(View view) { //Update
+            public void onClick(View view) { //Update the code details
                 dbref = FirebaseDatabase.getInstance().getReference().child("DetailsOfCode");
                 try {
                     if (TextUtils.isEmpty(description.getText().toString()))
@@ -147,7 +147,7 @@ public class AddCode extends AppCompatActivity {
 
         btn9.setOnClickListener(new View.OnClickListener() { //Delete
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { // Delete code
                 dbref = FirebaseDatabase.getInstance().getReference().child("DetailsOfCode");
                 idToBeRemoved = search.getText().toString().trim();
                 DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
@@ -181,6 +181,19 @@ public class AddCode extends AppCompatActivity {
                 toast.show();
 
                 Intent intent = new Intent(AddCode.this,viewcodedetails.class);
+                startActivity(intent);
+            }
+        });
+        btn8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { //Cancel
+                Context context = getApplicationContext(); //The context to use. Usually your Application or Activity object
+                CharSequence message = "Canceled";//Display string
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, message, duration);
+                toast.show();
+
+                Intent intent = new Intent(AddCode.this,AdminDashboard.class);
                 startActivity(intent);
             }
         });

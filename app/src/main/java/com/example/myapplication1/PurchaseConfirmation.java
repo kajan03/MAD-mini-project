@@ -15,6 +15,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,7 +32,7 @@ public class PurchaseConfirmation extends AppCompatActivity {
 
     Button bt1,bt2,bt3,bt4;
     EditText discount1;
-    TextView famount,amount,code;
+    TextView famount,amount;
     String total;
     DatabaseReference dbref;
 
@@ -48,25 +49,24 @@ public class PurchaseConfirmation extends AppCompatActivity {
             discount1 = findViewById(R.id.discount1);
             famount = findViewById(R.id.famount);
             amount = findViewById(R.id.amount);
-            code = findViewById(R.id.discodetext);
-
-            Bundle b = getIntent().getExtras();
-            assert b != null;
-            total = b.getString("Value");
-            amount.setText(String.valueOf(total));
 
 
          bt1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Context context = getApplicationContext();
-                    CharSequence message = "Proceeding to Shipping details";
-                    int duration = Toast.LENGTH_SHORT;
-                    Toast toast = Toast.makeText(context, message, duration);
-                    toast.show();
+                    if(TextUtils.isEmpty(famount.getText().toString())){
+                        Toast.makeText(getApplicationContext(),"Please select 'GET YOYR FINAL AMOUNT' button",Toast.LENGTH_LONG).show();
+                    }else{
+                        Context context = getApplicationContext();
+                        CharSequence message = "Proceeding to Shipping details";
+                        int duration = Toast.LENGTH_SHORT;
+                        Toast toast = Toast.makeText(context, message, duration);
+                        toast.show();
 
-                    Intent intent = new Intent(PurchaseConfirmation.this,ShippingDetails.class);
-                    startActivity(intent);
+                        Intent intent = new Intent(PurchaseConfirmation.this,ShippingDetails.class);
+                        startActivity(intent);
+                    }
+
 
                 }
             });
@@ -81,7 +81,7 @@ public class PurchaseConfirmation extends AppCompatActivity {
                     Toast toast = Toast.makeText(context, message, duration);
                     toast.show();
 
-                    Intent intent = new Intent(PurchaseConfirmation.this,home.class);
+                    Intent intent = new Intent(PurchaseConfirmation.this,Homeactivity.class);
                     startActivity(intent);
                 }
             });
@@ -104,17 +104,18 @@ public class PurchaseConfirmation extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                if(discount1.getText().toString().equals("cr12A")){ // Need to get code details from database
-                    double no2 = Double.valueOf(amount.getText().toString());
-                    double m = 75.0/100.0;
-                    double no4 = no2*m;
-                    famount.setText(String.valueOf(no4));
+                    if(discount1.getText().toString().equals("cr12A")){ // Need to get code details from database
+                        double no2 = Double.valueOf(amount.getText().toString());
+                        double m = 75.0/100.0;
+                        double no4 = no2*m;
+                        famount.setText(String.valueOf(no4));
+                    }
+                    else {
+                        double Net = Double.valueOf(amount.getText().toString());
+                        famount.setText(String.valueOf(Net));
+                    }
                 }
-                else {
-                    double Net = Double.valueOf(amount.getText().toString());
-                    famount.setText(String.valueOf(Net));
-                }
-            }
+                
         });
     }
 
