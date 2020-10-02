@@ -50,23 +50,10 @@ public class PurchaseConfirmation extends AppCompatActivity {
             amount = findViewById(R.id.amount);
             code = findViewById(R.id.discodetext);
 
-         /*  Bundle b = getIntent().getExtras();
+            Bundle b = getIntent().getExtras();
             assert b != null;
             total = b.getString("Value");
-            famount.setText(String.valueOf(total));
-
-         ++++ This will come here after Merging ++++
-         */
-
-         /*
-            sum = totalamount.getText().toString();
-            Intent intent = new Intent(CardFrag.this,PurchaseConfirmation.class);
-            intent.putExtra("Value",sum);
-            startActivity(intent);
-            finish();
-
-            ++++ This will come under CardFrag.java "Next" button ++++
-          */
+            amount.setText(String.valueOf(total));
 
 
          bt1.setOnClickListener(new View.OnClickListener() {
