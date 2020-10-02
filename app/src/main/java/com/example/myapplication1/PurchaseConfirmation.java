@@ -104,9 +104,9 @@ public class PurchaseConfirmation extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                    if(discount1.getText().toString().equals("cr12A")){ // Need to get code details from database
+                    if(discount1.getText().toString().equals("cr12A")){
                         double no2 = Double.valueOf(amount.getText().toString());
-                        double m = 75.0/100.0;
+                        double m = 80.0/100.0;
                         double no4 = no2*m;
                         famount.setText(String.valueOf(no4));
                     }
