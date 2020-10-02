@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".FeedbackMainActivity">
+
+        </activity>
+        <activity android:name=".Feedback"/>
         <activity android:name=".CartActivity"/>
         <activity android:name=".KidsActivity"></activity>
         <activity android:name=".WomenActivity"></activity>
@@ -57,11 +61,7 @@
         <activity
             android:name=".PurchaseConfirmation"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Payment"
