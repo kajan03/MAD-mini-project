@@ -30,7 +30,7 @@
         android:ems="10"
         android:hint="@string/M45"
         android:inputType="textPersonName"
-        android:textColor="#813838"
+        android:textColor="#00B2D0"
         android:textColorHint="#88290B"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
