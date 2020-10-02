@@ -26,6 +26,7 @@ public class Homefrag extends Fragment {
     private String mParam2;
     RecyclerView homerecview;
     Homeadapter adapter;
+    FloatingActionButton cart_float_btn;
 
     public Homefrag() {
 
@@ -59,6 +60,19 @@ public class Homefrag extends Fragment {
 
         View view= inflater.inflate(R.layout.fragment_recfragment, container, false);
         homerecview = (RecyclerView)view.findViewById(R.id.homerecview);
+
+        /*          sid         */
+        cart_float_btn = (FloatingActionButton) view.findViewById(R.id.cart_float_btn);
+
+        cart_float_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),CartActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         homerecview.setLayoutManager(new GridLayoutManager(getContext(),2));
 
 

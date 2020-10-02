@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication1">
 
+    <uses-permission android:name="android.permission.INTERNET" />
 
-    
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,9 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddCategory">
-
+        <activity android:name=".CartActivity">
         </activity>
+        <activity android:name=".AddCategory" />
         <activity android:name=".Homeactivity">
 
             <intent-filter>
@@ -22,16 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".home">
-
-        </activity>
+        <activity android:name=".home" />
         <activity android:name=".Crud" />
         <activity android:name=".AddProduct" />
         <activity android:name=".MainActivity2" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

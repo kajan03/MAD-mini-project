@@ -1,17 +1,24 @@
 package com.example.myapplication1;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.example.myapplication1.Model.Product;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -25,7 +32,7 @@ public class Homeadapter extends FirebaseRecyclerAdapter<Product,Homeadapter.hom
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull homeviewholder holder, int position, @NonNull final Product model) {
+    protected void onBindViewHolder(@NonNull homeviewholder holder, final int position, @NonNull final Product model) {
         holder.productname.setText(model.getName());
         holder.brand.setText(model.getBrand());
         holder.price.setText(model.getPrice());
@@ -38,6 +45,8 @@ public class Homeadapter extends FirebaseRecyclerAdapter<Product,Homeadapter.hom
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.home1,new detailsfragment(model.getName(),model.getBrand(),model.getPrice(),model.getCategory(),model.getImage())).addToBackStack(null).commit();
             }
         });
+
+
     }
 
     @NonNull
@@ -51,6 +60,8 @@ public class Homeadapter extends FirebaseRecyclerAdapter<Product,Homeadapter.hom
 
     ImageView productImage;
     TextView productname,brand,price;
+
+
     public homeviewholder(View itemView){
         super(itemView);
 
@@ -58,6 +69,10 @@ public class Homeadapter extends FirebaseRecyclerAdapter<Product,Homeadapter.hom
         productname = itemView.findViewById(R.id.productname);
         brand = itemView.findViewById(R.id.brand);
         price = itemView.findViewById(R.id.price);
+
+
+
+
         }
     }
 
