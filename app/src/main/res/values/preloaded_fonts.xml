@@ -2,6 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/aclonica</item>
+        <item>@font/bad_script</item>
         <item>@font/berkshire_swash</item>
         <item>@font/habibi</item>
         <item>@font/oregano</item>

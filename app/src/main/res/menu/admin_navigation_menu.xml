@@ -12,17 +12,17 @@
         android:icon="@drawable/catogoryicon">
 
         <menu>
-            <item android:id="@+id/menuMen"
+            <item android:id="@+id/menuProduct"
                 android:title="@string/ProductList"
                 android:icon="@drawable/tshirticon"
                 />
 
-            <item android:id="@+id/menuWomen"
-                android:title="PaymentList"
+            <item android:id="@+id/menuShipping"
+                android:title="Shipping List"
                 android:icon="@drawable/tshirticon"
                 />
 
-            <item android:id="@+id/menuKids"
+            <item android:id="@+id/menuFeedback"
                 android:title="FeedbackList"
                 android:icon="@drawable/tshirticon"
                 />

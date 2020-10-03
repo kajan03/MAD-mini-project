@@ -63,6 +63,14 @@ public class AdminDashboard extends AppCompatActivity {
             }
         });
 
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),FeedbackMainActivity.class));
+
+            }
+        });
+
         nav.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item)
@@ -74,6 +82,26 @@ public class AdminDashboard extends AppCompatActivity {
                         FirebaseAuth.getInstance().signOut();
                         startActivity(new Intent(getApplicationContext(),Login.class));
                         finish();
+
+                    case R.id.menuProfile:
+                        startActivity(new Intent(getApplicationContext(),ProfileUser.class));
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
+                    case R.id.menuProduct:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
+                    case R.id.menuFeedback:
+                        startActivity(new Intent(getApplicationContext(),FeedbackMainActivity.class));
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
+                    case R.id.menuShipping:
+                        startActivity(new Intent(getApplicationContext(),ViewPaymentShipping.class));
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
 
 
 
