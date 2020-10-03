@@ -139,10 +139,10 @@ public class Homefrag extends Fragment {
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
-                   /* case R.id.menuProfile:
+                    case R.id.menuProfile:
                         startActivity(new Intent(getActivity(),ProfileUser.class));
                         drawerLayout.closeDrawer(GravityCompat.START);
-                        break;*/
+                        break;
                     case R.id.menuLogout:
                         FirebaseAuth.getInstance().signOut();
                         startActivity(new Intent(getActivity(),Login.class));
