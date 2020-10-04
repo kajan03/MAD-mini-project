@@ -8,6 +8,7 @@ public class DetailsOfPayment {
     private String name;
     private int month;
     private int year;
+    private double amount;
 
 
     public DetailsOfPayment() {
@@ -69,6 +70,12 @@ public class DetailsOfPayment {
         this.year = year;
     }
 
+    public double getAmount() {
+        return amount;
+    }
 
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
 }
 

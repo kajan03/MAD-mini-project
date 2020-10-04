@@ -37,6 +37,7 @@ public class PaymentList extends ArrayAdapter<DetailsOfPayment> {
         TextView textView5 = (TextView) listViewItem.findViewById(R.id.textView5);
         TextView textView6 = (TextView) listViewItem.findViewById(R.id.textView6);
         TextView textView7 = (TextView) listViewItem.findViewById(R.id.textView7);
+        TextView textView14 = (TextView) listViewItem.findViewById(R.id.textView14);
 
         textView1.setTextColor(Color.BLACK);
         textView2.setTextColor(Color.BLACK);
@@ -45,6 +46,7 @@ public class PaymentList extends ArrayAdapter<DetailsOfPayment> {
         textView5.setTextColor(Color.BLACK);
         textView6.setTextColor(Color.BLACK);
         textView7.setTextColor(Color.BLACK);
+        textView14.setTextColor(Color.BLACK);
 
 
         DetailsOfPayment paymentdetail = paymentList.get(position);
@@ -56,6 +58,8 @@ public class PaymentList extends ArrayAdapter<DetailsOfPayment> {
         textView5.setText(toString().valueOf(paymentdetail.getCard4()));
         textView6.setText(toString().valueOf(paymentdetail.getMonth()));
         textView7.setText(toString().valueOf(paymentdetail.getYear()));
+        textView14.setText(toString().valueOf(paymentdetail.getAmount()));
+
 
         return listViewItem;
     }

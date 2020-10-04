@@ -231,6 +231,32 @@
                         android:textColorHint="#969698"
                         android:textSize="19dp" />
 
+                    <TextView
+                        android:id="@+id/tot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/expire"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="cursive"
+                        android:text="AMOUNT"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tot1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text7"
+                        android:layout_marginStart="130dp"
+                        android:layout_marginTop="18dp"
+                        android:fontFamily="cursive"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
                     <Button
                         android:id="@+id/deletepayment"
                         android:layout_width="100dp"
