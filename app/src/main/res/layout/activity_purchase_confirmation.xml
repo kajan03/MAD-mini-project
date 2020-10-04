@@ -104,7 +104,7 @@
 
                     <Button
                         android:id="@+id/promo"
-                        android:layout_width="275dp"
+                        android:layout_width="280dp"
                         android:layout_height="50dp"
                         android:layout_marginStart="50dp"
                         android:layout_marginLeft="150dp"
@@ -209,7 +209,7 @@
                     <TextView
                         android:id="@+id/famount"
                         android:layout_width="120dp"
-                        android:layout_height="30dp"
+                        android:layout_height="28dp"
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="20dp"
