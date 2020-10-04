@@ -120,7 +120,7 @@ public class PurchaseConfirmation extends AppCompatActivity {
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(context, message, duration);
                 toast.show();
-                Intent intent = new Intent(PurchaseConfirmation.this,codelist.class);
+                Intent intent = new Intent(PurchaseConfirmation.this,viewcodedetails.class);
                 startActivity(intent);
 
 
