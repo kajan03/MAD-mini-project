@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".IntroActivity">
+        <activity android:name=".IntroActivity"
+            android:label="@string/Albito">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,8 +25,7 @@
         <activity android:name=".KidsActivity" />
         <activity android:name=".WomenActivity" />
         <activity
-            android:name=".MenActivity"
-            android:label="@string/title_activity_men" />
+            android:name=".MenActivity" />
         <activity android:name=".AdminDashboard" />
         <activity android:name=".AddCategory" />
         <activity android:name=".Homeactivity" />
