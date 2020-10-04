@@ -9,29 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".IntroActivity">
+        <activity android:name=".IntroActivity"
+            android:label="@string/Albito">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".EditProfile" />
         <activity android:name=".ProfileUser"></activity>
-        <activity android:name=".CartActivity" >
-
-        </activity>
+        <activity android:name=".CartActivity" />
         <activity android:name=".FeedbackMainActivity" />
         <activity android:name=".Feedback" />
         <activity android:name=".KidsActivity" />
         <activity android:name=".WomenActivity" />
         <activity
-            android:name=".MenActivity"
-            android:label="@string/title_activity_men" />
-        <activity android:name=".AdminDashboard" >
-
-        </activity>
+            android:name=".MenActivity" />
+        <activity android:name=".AdminDashboard" />
         <activity android:name=".AddCategory" />
         <activity android:name=".Homeactivity" />
         <activity android:name=".home" />

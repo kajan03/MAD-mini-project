@@ -1,4 +1,4 @@
-package com.example.myapplication1;
+package com.example.myapplication1.IT19134468_Sithpavan;
 
 import org.junit.After;
 import org.junit.AfterClass;

@@ -83,18 +83,8 @@ public class Productfrag extends Fragment {
             }
         });
 
-        Logout = (Button)view.findViewById(R.id.logout);
-
-        Logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getActivity(),Login.class));
-                getActivity().finish();
 
 
-            }
-        });
 
         return view;
     }
