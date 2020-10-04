@@ -15,10 +15,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".EditProfile" />
         <activity android:name=".ProfileUser"></activity>
-        <activity android:name=".CartActivity" />
+        <activity android:name=".CartActivity" >
+
+        </activity>
         <activity android:name=".FeedbackMainActivity" />
         <activity android:name=".Feedback" />
         <activity android:name=".KidsActivity" />
@@ -26,7 +29,9 @@
         <activity
             android:name=".MenActivity"
             android:label="@string/title_activity_men" />
-        <activity android:name=".AdminDashboard" />
+        <activity android:name=".AdminDashboard" >
+
+        </activity>
         <activity android:name=".AddCategory" />
         <activity android:name=".Homeactivity" />
         <activity android:name=".home" />
