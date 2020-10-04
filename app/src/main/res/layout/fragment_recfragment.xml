@@ -29,7 +29,8 @@
         android:id="@+id/homerecview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-android:layout_marginTop="90dp"
+android:layout_marginTop="260dp"
+        android:layout_gravity="center_horizontal"
 
          />
 
@@ -62,7 +63,15 @@ android:layout_marginTop="90dp"
         android:layout_gravity="center_horizontal"
          />
 
-    </FrameLayout>
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="364dp"
+        android:layout_height="167dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        app:srcCompat="@drawable/poster1" />
+
+</FrameLayout>
 
    <com.google.android.material.navigation.NavigationView
        android:id="@+id/navmenu"
