@@ -77,14 +77,6 @@
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        <Button
-            android:id="@+id/logout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="48dp"
-            android:layout_gravity="bottom|center"
-            android:text="@string/Logout"
-            />
     </FrameLayout>
 
     <com.google.android.material.navigation.NavigationView
