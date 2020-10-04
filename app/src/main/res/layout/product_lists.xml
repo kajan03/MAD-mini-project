@@ -64,9 +64,10 @@
             android:id="@+id/editbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="40dp"
             android:text="@string/Edit"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.625"
             app:layout_constraintStart_toEndOf="@+id/productImage"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -74,9 +75,10 @@
             android:id="@+id/delbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="12dp"
             android:text="@string/Delete"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.625"
             app:layout_constraintStart_toEndOf="@+id/productImage"
             app:layout_constraintTop_toBottomOf="@+id/editbtn" />
 

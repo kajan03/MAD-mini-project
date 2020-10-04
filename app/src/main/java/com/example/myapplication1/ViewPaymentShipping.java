@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class ViewPaymentShipping extends AppCompatActivity {
 
-    Button buttonA, buttonB, buttonC, buttonD;
+    Button buttonA, buttonB, buttonC, buttonD,buttonE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +22,11 @@ public class ViewPaymentShipping extends AppCompatActivity {
         buttonB = findViewById(R.id.viewpayment);
         buttonC = findViewById(R.id.Deleteshipping);
         buttonD = findViewById(R.id.Deletepayment);
+        buttonE = findViewById(R.id.spcancel);
 
         buttonA.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { //view list of shipping details
                 Context context = getApplicationContext(); //The context to use. Usually your Application or Activity object
                 CharSequence message = "shipping details page";//Display string
                 int duration = Toast.LENGTH_SHORT; //How long the toast message will lasts
@@ -39,7 +40,7 @@ public class ViewPaymentShipping extends AppCompatActivity {
 
         buttonB.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { //View list of payment details
                 Context context = getApplicationContext(); //The context to use. Usually your Application or Activity object
                 CharSequence message = "Payment details page";//Display string
                 int duration = Toast.LENGTH_SHORT; //How long the toast message will lasts
@@ -53,7 +54,7 @@ public class ViewPaymentShipping extends AppCompatActivity {
 
         buttonC.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { //Delete payment details page
                 Context context = getApplicationContext();
                 CharSequence message = "Delete shipping details page";
                 int duration = Toast.LENGTH_SHORT;
@@ -67,7 +68,7 @@ public class ViewPaymentShipping extends AppCompatActivity {
         });
         buttonD.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { //Delete payment details page
                 Context context = getApplicationContext();
                 CharSequence message = "Delete payment details page";
                 int duration = Toast.LENGTH_SHORT;
@@ -75,6 +76,21 @@ public class ViewPaymentShipping extends AppCompatActivity {
                 toast.show();
 
                 Intent intent = new Intent(ViewPaymentShipping.this,DeletePayment.class);
+                startActivity(intent);
+
+            }
+        });
+
+        buttonE.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { // cancel and go to admin dashboard
+                Context context = getApplicationContext();
+                CharSequence message = "Admin Dashboard";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, message, duration);
+                toast.show();
+
+                Intent intent = new Intent(ViewPaymentShipping.this,AdminDashboard.class);
                 startActivity(intent);
 
             }

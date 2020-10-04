@@ -32,11 +32,12 @@ public class Payment extends AppCompatActivity {
 
     Button b1,b2,b3,proceed;
     EditText e1,e2,e3,e4,e5,e6,e7,e8;
-    TextView t1,t2,t3,t4,t5;
+    TextView t1,t2,t3,t4,t5,t6;
     DatabaseReference dbref;
     DetailsOfPayment DPay;
     long maxid = 0;
     public static final String CHANNEL_ID = "Purchase confirmation pg";
+    String finaltotalamt;
 
     private void clearControls() {
         e1.setText("");
@@ -63,11 +64,18 @@ public class Payment extends AppCompatActivity {
         e7 = (EditText) findViewById(R.id.text7); // year
         e8 = (EditText) findViewById(R.id.text8); // cvv
 
+
         t1 = (TextView)findViewById(R.id.code);
         t2 = (TextView)findViewById(R.id.cardholder);
         t3 = (TextView)findViewById(R.id.month);
         t4 = (TextView)findViewById(R.id.year);
         t5 = (TextView)findViewById(R.id.cvv);
+        t6 = (TextView)findViewById(R.id.finalamt1);
+
+        Bundle b = getIntent().getExtras();
+        assert b != null;
+        finaltotalamt = b.getString("finaltotal");
+        t6.setText(String.valueOf(finaltotalamt));
 
         DPay = new DetailsOfPayment();
 
@@ -216,12 +224,15 @@ public class Payment extends AppCompatActivity {
                         DPay.setName(e5.getText().toString().trim());
                         DPay.setMonth(Integer.parseInt(e6.getText().toString().trim()));
                         DPay.setYear(Integer.parseInt(e7.getText().toString().trim()));
+                        DPay.setAmount(Double.parseDouble(t6.getText().toString().trim()));
 
                         dbref.child(String.valueOf(maxid+1)).setValue(DPay); // add to database with auto increment id
 
-                        Toast.makeText(getApplicationContext(),"Paid Successfully",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Paid Successfully",Toast.LENGTH_LONG).show();
                         clearControls();
                         addNotification();
+                        Intent intent = new Intent(Payment.this,Homeactivity.class);
+                        startActivity(intent);
                     }
                 }
                 catch(NumberFormatException e){

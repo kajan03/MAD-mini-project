@@ -76,7 +76,14 @@
     <string name="M25">Create your Account</string>
     <string name="M1">Log in to your Account</string>
     <string name="M4">Login</string>
-
+    <string name="M19">FEEDBACK</string>
+    <string name="M20">After using Albito for a bit now, how would you rate your experience?</string>
+    <string name="M7">Rate Us...</string>
+    <string name="M41">Edit Feedback</string>
+    <string name="M42">Enter username</string>
+    <string name="M44">Add Feedback</string>
+    <string name="M43">Leave your comments</string>
+    <string name="M45">Feedback</string>
     <string name="M40">CREATE ACCOUNT</string>
 
 
@@ -93,7 +100,7 @@
     <string name="pcode">Postal Code</string>
     <string name="pnumber">Phone Number</string>
     <string name="email">Email</string>
-    <string name="proceed">PROCEED TO PAYMANT</string>
+    <string name="proceed">PROCEED TO PAYMENT</string>
     <string name="cancel">Cancel</string>
 
     //Strings of Payment
@@ -133,7 +140,7 @@
     //Strings of Payment confirmation
     <string name="confirm">PURCHASE CONFIRMATION</string>
     <string name="cpayment">PROCEED TO SHIPPING</string>
-    <string name="cancel4">Canncel</string>
+    <string name="cancel4">Cancel</string>
     <string name="addpromo">CHECK FOR DISCOUNT CODE</string>
     <string name="Totalamount">Total Amount</string>
     <string name="amount">2700.00</string>
@@ -151,7 +158,7 @@
     <string name="viewcode">VIEW CODES</string>
     <string name="button_edit">UPDATE CODE</string>
     <string name="update">Update Discount</string>
-    <string name="searchcode">Find by ID</string>
+    <string name="searchcode">Find by code</string>
     <string name="searchcodeid">SEARCH</string>
     <string name="deletecode">DELETE CODE</string>
     <string name="updatecode">UPDATE CODE</string>
@@ -189,6 +196,7 @@
     values-round/strings.xml for round devices.
     -->
     <string name="hello_world">Hello Square World!</string>
+    <string name="Intro">Buy now or cry later..</string>
     //End of String of DEEPIKA
 
 </resources>
